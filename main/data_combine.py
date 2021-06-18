@@ -38,7 +38,7 @@ def concat_files(files:list) -> pd.DataFrame:
             df = pd.read_excel(file, header=1)
             df_list.append(df)
         except:
-            pass
+            print(file + ' was not read')
 
     df_combined = pd.concat(df_list)
     return df_combined
